@@ -2,7 +2,7 @@
 
 This repository contains everything necessary to create:
 
-* A single MyBB 1.8.27 installation, based on PHP 7.4
+* A single MyBB 1.8.38 installation, based on PHP 8.2
 * ...with two users: _admin_ and _user_
 * ...who have exchanged five PMs in total
 * ...which should get rendered into a single thread when imported into WBB
@@ -16,7 +16,16 @@ This repository contains everything necessary to create:
 
 ## Getting Started
 
-Just run the following command and wait for a couple seconds:
+Since MyBB does *not* provide a PHP 8.2 based image, we build it ourselves.
+For that to work, we have created our own `Dockerfile`, but we still use the regular process that MyBB uses themselves.
+
+You need to make sure that the `docker/` submodule is pulled and up to date (this only needs to be done once):
+
+```shell
+$ git submodule update --init
+```
+
+Now, just run the following command and wait for a couple seconds:
 
 ```shell
 $ docker-compose up -d
