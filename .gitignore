@@ -1,0 +1,7 @@
+.idea/*
+*.swp
+*.DS_Store
+Thumbs.db
+
+wwwroot/*
+!wwwroot/.gitkeep
